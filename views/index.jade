@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= title
+    p What would you like Trump to say?
+    img(src="http://s3-origin-images.politico.com/2015/06/16/150616_latimer_trump_ap.jpg")
+    form(action="/submit", method="post")
+        div.form-group
+            input.form-control(type="text", name="keyword", placeholder="Search")
+    button.btn.btn-default(type="submit") Submit

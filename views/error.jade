@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1.error= message
+  img(src="http://i.onionstatic.com/onion/1931/2/1x1/480.jpg")
+  h2= error.status
+  pre #{error.stack}
+  
