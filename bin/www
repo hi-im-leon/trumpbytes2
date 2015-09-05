@@ -8,6 +8,21 @@ var app = require('../app');
 var debug = require('debug')('trumpbytes:server');
 var http = require('http');
 
+
+/*
+ ============= 
+  YouTube API
+ =============
+*/
+var Youtube = require("youtube-api")
+  , Fs = require("fs")
+  , ReadJson = require("r-json")
+  , Lien = require("lien")
+  , Logger = require("bug-killer")
+  , Opn = require("opn")
+  ;
+
+
 /**
  * Get port from environment and store in Express.
  */
@@ -20,6 +35,10 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
+
+// Create server
+// Http.createServer(Statique.serve).listen(5000);
+// console.log("Open: http://localhost:5000");
 
 /**
  * Listen on provided port, on all network interfaces.
